@@ -16,7 +16,7 @@ namespace HomeWork.Api.Middlewares
             if (!context.Request.Headers.ContainsKey("X-API-KEY"))
             {
                 context.Response.StatusCode = StatusCodes.Status401Unauthorized;
-                await context.Response.WriteAsync("❌ Unauthorized: Missing API Key");
+                await context.Response.WriteAsync("Unauthorized: Missing API Key");
                 return;
             }
 
